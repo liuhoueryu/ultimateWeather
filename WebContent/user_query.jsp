@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>用户查询</title>
 
 <script src="js/user_query.js"></script>
 
@@ -17,7 +17,7 @@
  
 </head>
 <body>
-
+<div align="center">
 <%
 	//登录检查
 	if(session.getAttribute("user")==null){   //未登录	
@@ -104,7 +104,7 @@
 %>
 		<tr>
 			  <td><input type="checkbox" name="userids" value="<%=user.getUserid()%>" onclick="checkAll()"/></td>
-			  <td><img src="image/photo/<%=user.getPhoto()%>"/></td>
+			  <td><img src="image/photo/<%=user.getPhoto()%>" height="44" width="44"/></td>
 			  <td><%=StringUtil.convertKeyword(user.getUsername(), username) %></td>
 			  <td><%=user.getScore() %></td>
 			  <td><%=user.getGender() %></td>
@@ -131,5 +131,6 @@
 
 </table>
 </form>
+</div>
 </body>
 </html>

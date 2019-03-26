@@ -28,7 +28,7 @@
 
 <%
 	//从session属性范围中取出用户名，积分,头像
-	/* String username = (String)session.getAttribute("username");
+	/* String username = ( String)session.getAttribute("username");
 	int score = (Integer)session.getAttribute("score");
 	String photo = (String)session.getAttribute("photo"); */
 	
@@ -39,7 +39,7 @@
 	int onlineCount = (Integer)application.getAttribute("onlineCount");
 %>
 
-<center><img src="image/photo/<%=user.getPhoto()%>">，欢迎【<%=user.getUsername() %>】光临主页，当前积分为【<%=user.getScore() %>】分，您是第【<%=onlineCount %>】位访客
+<center><img src="image/photo/<%=user.getPhoto()%>" height="44" width="44">，欢迎【<%=user.getUsername() %>】光临主页，当前积分为【<%=user.getScore() %>】分，您是第【<%=onlineCount %>】位访客
 
 <br/>
 <a href="WeatherQueryServlet">天气查询</a>

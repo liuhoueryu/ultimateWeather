@@ -81,13 +81,18 @@ header{
 	color: red;
 }
 
-
+.register_wrap{
+	background: url(../img/background.jpg) no-repeat center;
+	background-size: 100%;
+	margin: 0px auto;
+}
 
 
 
 .login_wrap{
 	background: url(../img/logo_bg.jpg) no-repeat center;
 	background-size: 100%;
+	margin: 0px auto;
 }
 .logo{
 	width: 500px;
@@ -99,6 +104,7 @@ header{
 	width: 360px;
 	background: #FFFFFF;
 	margin: 0px auto;
+	
 }
 .login_title{
 	font-size: 25px;

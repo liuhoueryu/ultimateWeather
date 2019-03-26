@@ -10,7 +10,7 @@
 
 <%
 	//创建Cookie
-	Cookie cookie = new Cookie("username", "");
+	Cookie cookie = new Cookie("userinfo", "");
 	
 	//设置cookie的最大存活时间
 	cookie.setMaxAge(0);

@@ -13,7 +13,7 @@
 
 </head>
 <body>
-
+<div align="center">
 <c:if test="${requestScope.newsPage==null }">
 	<%
 		response.sendRedirect("NewsQueryServlet");
@@ -91,6 +91,6 @@
 <a href="index.jsp">返回主页</a>
 
 </c:if>
-
+</div>
 </body>
 </html>

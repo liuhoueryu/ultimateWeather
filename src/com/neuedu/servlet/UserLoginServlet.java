@@ -59,6 +59,9 @@ public class UserLoginServlet extends HttpServlet {
 			if(autoLogin!=null){
 				CookieUtil.addCookie("userinfo", username + ":" + password, 7, response);
 			}
+			else {
+				CookieUtil.deleteCookie("userinfo", response);
+			}
 			
 			//将user对象保存到session属性范围中
 			session.setAttribute("user", user);

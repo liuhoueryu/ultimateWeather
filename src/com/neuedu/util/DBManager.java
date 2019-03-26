@@ -56,7 +56,7 @@ public class DBManager {
 	//打开数据库连接
 	private void openConnection(){
 		try {
-			this.conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/tylgky", "root", "liuhoueryu123");
+			this.conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/tylgky", dbUsername, dbPassword);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
