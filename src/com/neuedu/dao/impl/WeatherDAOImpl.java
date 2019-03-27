@@ -6,17 +6,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.neuedu.dao.WeatherDAO;
-import com.neuedu.entity.User;
 import com.neuedu.entity.Weather;
 import com.neuedu.util.DBManager;
 
 public class WeatherDAOImpl implements WeatherDAO {
 
 	@Override
-	public List<Weather> findWeatherList(String province,String city) {
+	public List<Weather> findWeatherList(String province, String city,int page) {
 		DBManager dbManager = DBManager.getInstance();
-		String sql = "select * from weather where city like ? and province like ? order by province asc, city asc,date asc";
-		ResultSet rs = dbManager.execQuery(sql, "%" + city + "%", "%" + province + "%");
+		String sql = "select * from weather where city like ? and province like ? order by province asc, city asc,date desc";
+		sql += " limit ?, 20";
+		ResultSet rs = dbManager.execQuery(sql, "%" + city + "%", "%" + province + "%",page);
 		List<Weather> list = new ArrayList<>();
 
 		try {

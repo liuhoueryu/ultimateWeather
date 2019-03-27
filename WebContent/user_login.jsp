@@ -6,7 +6,7 @@
 
 <head>
 <meta charset="utf-8">
-<title>登录</title>
+<title>登 录</title>
 
 <link rel="stylesheet" href="css/reset.css" />
 <link rel="stylesheet" href="css/common.css" />

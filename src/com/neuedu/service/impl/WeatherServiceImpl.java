@@ -11,8 +11,8 @@ public class WeatherServiceImpl implements WeatherService {
 	private WeatherDAO weatherDAO = new WeatherDAOImpl();
 
 	@Override
-	public List<Weather> getWeatherList(String province, String city) {
-		return weatherDAO.findWeatherList(province, city);
+	public List<Weather> getWeatherList(String province, String city,int page) {
+		return weatherDAO.findWeatherList(province, city,page);
 	}
 
 }
