@@ -54,7 +54,7 @@ public class UserRegisterServlet extends HttpServlet {
 		
         String allowedFilesList = "jpg,gif";
         
-        int maxFileSize = 100;
+        int maxFileSize = 10;
         
         String photo = null;
         
@@ -65,7 +65,7 @@ public class UserRegisterServlet extends HttpServlet {
         	smartUpload.setAllowedFilesList(allowedFilesList);
         	
         	//检查3---判断文件的大小
-        	smartUpload.setMaxFileSize(1024*maxFileSize);
+        	smartUpload.setMaxFileSize(1024*1024*maxFileSize);
         	
         	//上传文件到服务器
 			smartUpload.upload();
@@ -105,7 +105,7 @@ public class UserRegisterServlet extends HttpServlet {
 			out.print("<script>alert('文件上传失败');history.back()</script>");
 			return;
 		} catch (SecurityException e) {
-			out.print("<script>alert('只能上传"+allowedFilesList+"文件,而且大小不能超过"+maxFileSize+"KB');history.back()</script>");
+			out.print("<script>alert('只能上传"+allowedFilesList+"文件,而且大小不能超过"+maxFileSize+"MB');history.back()</script>");
 			return;
 		}
      

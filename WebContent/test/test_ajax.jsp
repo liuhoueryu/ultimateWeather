@@ -49,7 +49,6 @@
 <body>
 
 用户名<input type="text" id="username"/>
-
 <button onclick="testAjax()">Ajax访问Servlet</button>
 
 </body>

@@ -11,7 +11,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.neuedu.entity.User;
 import com.neuedu.entity.Weather;
+import com.neuedu.service.UserService;
+import com.neuedu.service.WeatherService;
+import com.neuedu.service.impl.UserServiceImpl;
+import com.neuedu.service.impl.WeatherServiceImpl;
 import com.neuedu.util.DBManager;
 
 public class WeatherQueryServlet extends HttpServlet {
@@ -22,41 +27,20 @@ public class WeatherQueryServlet extends HttpServlet {
 		String charSet = this.getServletContext().getInitParameter("charSet");
 		request.setCharacterEncoding(charSet);
 
-		
 		// 转码
-		request.setCharacterEncoding("utf-8");
+		// request.setCharacterEncoding("utf-8");
 		// 接收数据
 		String province = request.getParameter("province");
 		String city = request.getParameter("city");
-		
+
 		if (city == null)
 			city = "";
 		if (province == null)
 			province = "";
-		DBManager dbManager = DBManager.getInstance();
-		String sql = "select * from weather where city like ? and province like ? order by province asc, city asc,date asc";
-		ResultSet rs = dbManager.execQuery(sql, "%" + city + "%", "%" + province + "%");
-		List<Weather> list = new ArrayList<>();
 
-		try {
-			while (rs.next()) {
-				Weather weather = new Weather();
-				weather.setProvince(rs.getString(1));
-				weather.setCity(rs.getString(2));
-				weather.setWeather(rs.getString(3));
-				weather.setTemperature(rs.getString(4));
-				weather.setRainfall(rs.getString(5));
-				weather.setDate(rs.getString(6));
+		WeatherService weatherService = new WeatherServiceImpl();
 
-				list.add(weather);
-
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} finally {
-			dbManager.closeConnection();
-		}
+		List<Weather> list = weatherService.getWeatherList(province, city);
 		request.setAttribute("list", list);
 		request.setAttribute("province", province);
 		request.setAttribute("city", city);

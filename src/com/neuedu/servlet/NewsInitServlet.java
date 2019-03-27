@@ -30,8 +30,6 @@ public class NewsInitServlet extends HttpServlet {
 		
 		application.setAttribute("list", list);
 		
-		System.out.println("*******新闻类型列表加载成功**********");
-		
 	}
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	}

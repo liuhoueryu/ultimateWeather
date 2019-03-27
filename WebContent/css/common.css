@@ -87,7 +87,11 @@ header{
 	margin: 0px auto;
 }
 
-
+.login_wrap_forPhone{
+	background: url(../img/logo_bg.jpg) no-repeat;
+	background-size: 100%;
+	margin: 0px auto;
+}
 
 .login_wrap{
 	background: url(../img/logo_bg.jpg) no-repeat center;
