@@ -10,6 +10,7 @@
 <head>
 <meta charset="UTF-8">
 <title>天气大全</title>
+<link rel="icon" href="images/favicon.ico"/>
 </head>
 <style>
 * {
@@ -42,6 +43,8 @@ div {
 	<div>
 		<div align="center">
 		<a href="index.jsp">返回主页</a>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="weather_networking_query.jsp">在线天气查询</a>
 			<br> <br> <br>
 			<form action="WeatherQueryServlet" method="post">
 				请输入省份<input type="text" name="province" value="<%=province%>" />

@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="css/reset.css" />
 <link rel="stylesheet" href="css/common.css" />
 <link rel="stylesheet" href="css/font-awesome.min.css" />
-
+<link rel="icon" href="images/favicon.ico"/>
 </head>
 <body>
 <script type="text/javascript">

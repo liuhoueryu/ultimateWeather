@@ -6,6 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>主页</title>
+<link rel="icon" href="images/favicon.ico"/>
 </head>
 <body background="img/background.jpg">
 
@@ -40,11 +41,16 @@
 %>
 
 <center><img src="image/photo/<%=user.getPhoto()%>" height="44" width="44">，欢迎【<%=user.getUsername() %>】光临主页，当前积分为【<%=user.getScore() %>】分，您是第【<%=onlineCount %>】位访客
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="UserLogoutServlet">注销</a>
+<br/>
+<br>
+<br>
 <br/>
 <a href="WeatherQueryServlet">天气查询</a>
-<br/>
-<a href="UserLogoutServlet">注销</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="weather_networking_query.jsp">在线天气查询</a>
 </center>
 </body>
 </html>
