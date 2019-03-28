@@ -15,8 +15,8 @@
 		var username = document.getElementById("username");
 		var usernameResult = document.getElementById("usernameResult");
 
-		if (username.value.length<5 || username.value.length>10) {
-			usernameResult.innerHTML = "<img src='image/no.gif'/><font color='red'><b>用户名的长度必须在5-10个字符之间</b></font>";
+		if (username.value.length<2 || username.value.length>10) {
+			usernameResult.innerHTML = "<img src='image/no.gif'/><font color='red'><b>用户名的长度必须在2-10个字符之间</b></font>";
 			return false;
 		} else {
 
@@ -141,10 +141,10 @@ div {
 </style>
 </head>
 
-<body>
+<body style="background-image: url('img/background.jpg');background-repeat: no-repeat;">
 
 <!-- <div style="background-image: url('img/background.jpg');background-repeat: no-repeat;background-position: center;">
- -->	<div style="background-image: url('img/background.jpg');background-repeat: no-repeat;">
+ -->	<div >
 			<br>
 			<h2 align="center">新用户注册</h2>
 			<br>
@@ -156,7 +156,7 @@ div {
 					<tr>
 						<td>用户名</td>
 						<td width="500px"><input type="text" name="username"
-							id="username" onblur="checkUsername()" /> <span
+							id="username" onblur="checkUsername()" placeholder="请输入2-10个字符"/> <span
 							id="usernameResult"></span></td>
 					</tr>
 					<tr>
@@ -170,7 +170,14 @@ div {
 						<td><input type="password" id="password2"
 							onblur="checkPassword2()" /> <span id="passwordResult2"></span></td>
 					</tr>
-
+					
+					<tr>
+						<td>手机号码</td>
+						<td width="500px"><input type="text" name="phonenumber"
+							id="phonenumber" autocomplete="off" placeholder="填写手机号便于密码找回"/> <span
+							id="phonenumber"></span></td>
+					</tr>
+					
 					<tr>
 						<td>性别</td>
 						<td><input type="radio" name="gender" value="男" checked />男

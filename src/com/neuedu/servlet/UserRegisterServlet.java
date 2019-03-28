@@ -144,8 +144,8 @@ public class UserRegisterServlet extends HttpServlet {
 		int registerScore = Integer.parseInt(this.getInitParameter("registerScore"));
 		
 		//服务端数据检验
-		if(username.length()<5 || username.length()>10){
-			out.print("<script>alert('server:用户名的长度必须在5-10个字符之间');history.back()</script>");
+		if(username.length()<2 || username.length()>10){
+			out.print("<script>alert('server:用户名的长度必须在2-10个字符之间');history.back()</script>");
 			return;
 		}
 		

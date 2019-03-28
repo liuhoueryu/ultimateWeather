@@ -15,8 +15,8 @@
 		var username = document.getElementById("username");
 		var usernameResult = document.getElementById("usernameResult");
 
-		if (username.value.length<5 || username.value.length>10) {
-			usernameResult.innerHTML = "<img src='image/no.gif'/><font color='red'><b>用户名的长度必须在5-10个字符之间</b></font>";
+		if (username.value.length<2 || username.value.length>10) {
+			usernameResult.innerHTML = "<img src='image/no.gif'/><font color='red'><b>用户名的长度必须在2-10个字符之间</b></font>";
 			return false;
 		} else {
 
@@ -170,7 +170,7 @@ html, body {
 					<tr>
 						<td>用户名</td>
 						<td width="500px"><input type="text" name="username"
-							id="username" onblur="checkUsername()" /> <span
+							id="username" onblur="checkUsername()" placeholder="请输入2-10个字符" /> <span
 							id="usernameResult"></span></td>
 					</tr>
 					<tr>
@@ -188,7 +188,7 @@ html, body {
 					<tr>
 						<td>手机号码</td>
 						<td width="500px"><input type="text" name="phonenumber"
-							id="phonenumber" onblur="checkPhoneNummber()" /> <span
+							id="phonenumber" autocomplete="off" placeholder="填写手机号便于密码找回"/> <span
 							id="phonenumber"></span></td>
 					</tr>
 
@@ -204,6 +204,7 @@ html, body {
 								<option value="程序员" selected>程序员</option>
 								<option value="美工">美工</option>
 								<option value="项目经理">项目经理</option>
+								<option value="运动员">运动员</option>
 						</select></td>
 					</tr>
 
