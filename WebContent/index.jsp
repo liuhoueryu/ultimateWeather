@@ -7,8 +7,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>主页</title>
 <link rel="icon" href="images/favicon.ico"/>
+<link rel="stylesheet" href="css/weatherbox.css"/>
 </head>
-<body background="img/background.jpg">
+<body style="background-image: url('images/bg.jpg');background-repeat: no-repeat;background-size: 100%">
 
 <%
 	//登录检查
@@ -20,8 +21,6 @@
 			location = "user_login.jsp";
 		</script>	
 	 
-	 
-	         //  对不起，您尚未登录，请先<a href="user_login.jsp">登录</a>
 <%		
 		return;
 	}
@@ -50,7 +49,27 @@
 <br/>
 <a href="WeatherQueryServlet">天气查询</a>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="weather_networking_query.jsp">在线天气查询</a>
 </center>
+<div class="box" onclick="javascript:location='weather_networking_query.jsp'" style="cursor:pointer">
+	<ul class="minbox">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<ol class="maxbox">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ol>
+</div>
 </body>
 </html>

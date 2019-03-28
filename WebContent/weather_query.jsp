@@ -82,8 +82,12 @@ div {
 				<button name="index">首 页</button>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<button name="nextpage">下一页</button>
+				
 			</form>
+			
 		</div>
+		
 	</div>
+	
 </body>
 </html>
