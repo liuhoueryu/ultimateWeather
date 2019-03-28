@@ -135,14 +135,12 @@ html, body {
 	height: 100%;
 }
 
-div {
-	height: 95%;
-}
+
 </style>
 
 </head>
 
-<body>
+<body style="background-image: url('img/background.jpg');background-repeat: no-repeat;background-position: center;">
 <script type="text/javascript">
     // borwserRedirect
     (function browserRedirect(){
@@ -161,7 +159,6 @@ div {
       }
     })();
  </script>
-<div style="background-image: url('img/background.jpg');background-repeat: no-repeat;background-position: center;">
 			<br>
 			<h2 align="center">新用户注册</h2>
 			<br>
@@ -186,6 +183,13 @@ div {
 						<td>确认密码</td>
 						<td><input type="password" id="password2"
 							onblur="checkPassword2()" /> <span id="passwordResult2"></span></td>
+					</tr>
+					
+					<tr>
+						<td>手机号码</td>
+						<td width="500px"><input type="text" name="phonenumber"
+							id="phonenumber" onblur="checkPhoneNummber()" /> <span
+							id="phonenumber"></span></td>
 					</tr>
 
 					<tr>
@@ -246,7 +250,6 @@ div {
 				</table>
 
 			</form>
-	</div>
 </body>
 
 </html>

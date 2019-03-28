@@ -213,4 +213,14 @@
     <servlet-name>WeatherQueryServlet</servlet-name>
     <url-pattern>/WeatherQueryServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UserRetrievePasswordServlet</display-name>
+    <servlet-name>UserRetrievePasswordServlet</servlet-name>
+    <servlet-class>com.neuedu.servlet.UserRetrievePasswordServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserRetrievePasswordServlet</servlet-name>
+    <url-pattern>/UserRetrievePasswordServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

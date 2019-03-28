@@ -6,6 +6,7 @@ import java.util.Date;
 public class User implements Serializable {
 
 	private Integer userid;
+	private String phonenumber;
 	private String username;
 	private String password;
 	private Integer score;
@@ -21,6 +22,13 @@ public class User implements Serializable {
 	}
 	public void setUserid(Integer userid) {
 		this.userid = userid;
+	}
+	
+	public String getPhonenumber() {
+		return phonenumber;
+	}
+	public void setPhonenumber(String phonenumber) {
+		this.phonenumber = phonenumber;
 	}
 	public String getUsername() {
 		return username;

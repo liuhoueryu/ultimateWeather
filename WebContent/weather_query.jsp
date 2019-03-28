@@ -27,7 +27,7 @@ div {
 	height: 100%;
 }
 </style>
-<body>
+<body style="background-image: url('img/background.jpg');background-repeat: no-repeat;background-position: center;">
 	<%
 		if (request.getAttribute("list") == null) {
 			response.sendRedirect("WeatherQueryServlet");
@@ -39,7 +39,7 @@ div {
 		String province = (String) request.getAttribute("province");
 		String city = (String) request.getAttribute("city");
 	%>
-	<div style="background-image: url('img/timg.jpg');">
+	<div>
 		<div align="center">
 		<a href="index.jsp">返回主页</a>
 			<br> <br> <br>

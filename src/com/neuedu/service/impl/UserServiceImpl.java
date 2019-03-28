@@ -12,7 +12,16 @@ import com.neuedu.service.UserService;
 public class UserServiceImpl implements UserService {
 
 	private UserDAO userDAO = new UserDAOImpl();   //×éºÏ
-	
+	@Override
+	public User retrieveUserPassword(String username, String password) {
+		
+		return userDAO.updatePassword(username, password);
+	}
+	@Override
+	public boolean retrievePassword(String username, String phonenumber) {
+		boolean user=userDAO.findUserNumber(username, phonenumber);
+		return user;
+	}
 	@Override
 	public User login(String username, String password, int score) {
 		

@@ -125,6 +125,7 @@ public class UserRegisterServlet extends HttpServlet {
 		//接收数据
 		String username = smartUpload.getRequest().getParameter("username");
 		String password = smartUpload.getRequest().getParameter("password");
+		String phonenumber=smartUpload.getRequest().getParameter("phonenumber");
 		
 		String gender = smartUpload.getRequest().getParameter("gender");
 		String job = smartUpload.getRequest().getParameter("job");
@@ -166,6 +167,7 @@ public class UserRegisterServlet extends HttpServlet {
 		user.setJob(job);
 		user.setInterest(interest);
 		user.setRegtime(new Date());
+		user.setPhonenumber(phonenumber);
 		
 		
 		user = userService.register(user);
