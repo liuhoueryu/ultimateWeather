@@ -1,21 +1,19 @@
-/**
- * Created by zsq on 2016/11/13.
- */
 //调用jsonp函数请求当前所在城市
 jsonp('https://api.map.baidu.com/api?v=2.0&ak=Dv1NMU23dh1sGS9n2tUouDEYY96Dfzh3&s=1&callback=getCity');
 window.onload = function () {
     //请求天气车数据
-    btn.addEventListener('click',function () {
+    btn.addEventListener('click', function () {
         jsonp(createUrl()[0]);
         jsonp(createUrl()[1]);
     });
-    text.addEventListener('keydown', function (e){
+    text.addEventListener('keydown', function (e) {
         if (e.keyCode == 13) {
             jsonp(createUrl()[0]);
             jsonp(createUrl()[1]);
         }
     });
-}
+
+};
 
 function getCity() {
     function city(result) {
@@ -147,8 +145,9 @@ function createUrl() {
     } else {
         cityName = arguments[0];
     }
+    // console.log(cityName);
     var urls = [];
-    urls[0] = 'https://sapi.k780.com/?app=weather.future&appkey=10003&sign=b59bc3ef6191eb9f747dd4e83c99f2a4&format=json&jsoncallback=getWeather&weaid=' + encodeURI(cityName);
-    urls[1] = 'https://api.map.baidu.com/telematics/v3/weather?output=json&ak=FK9mkfdQsloEngodbFl4FeY3&callback=getTodayWeather&location=' + encodeURI(cityName);
+    urls[0] = 'https://sapi.k780.com/?app=weather.future&appkey=24797&sign=5b91421723a489d8d5cb4a2e27dedea5&format=json&jsoncallback=getWeather&weaid=' + encodeURI(cityName);
+    urls[1] = 'https://api.map.baidu.com/telematics/v3/weather?output=json&ak=Dv1NMU23dh1sGS9n2tUouDEYY96Dfzh3&callback=getTodayWeather&location=' + encodeURI(cityName);
     return urls;
 }

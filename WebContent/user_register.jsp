@@ -133,9 +133,12 @@
 }
 
 html, body {
+	height: 97%;
+}
+div {
+	width: 100%;
 	height: 100%;
 }
-
 
 </style>
 
@@ -160,6 +163,7 @@ html, body {
       }
     })();
  </script>
+ 	<div>
 			<br>
 			<h2 align="center">新用户注册</h2>
 			<br>
@@ -252,6 +256,7 @@ html, body {
 				</table>
 
 			</form>
+	</div>
 </body>
 
 </html>

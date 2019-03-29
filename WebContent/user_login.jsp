@@ -68,7 +68,7 @@
 						</div>
 						<div class="form_check_ipt">
 							<div class="left check_left">
-								<label><input type="checkbox" name="autoLogin">记住密码</label>
+								<label><input type="checkbox" name="autoLogin" checked="checked">记住密码</label>
 							</div>
 							<div class="right check_right">
 								<a href="user_retrieve_password.jsp">忘记密码</a>
@@ -78,7 +78,7 @@
 							<button type="submit">登录</button>
 						</div>
 						<div class="form_reg_btn">
-							<span>还没有帐号？</span><a href="user_register.jsp">马上注册</a>
+							<span>还没有帐号？</span><a href="forward_register.jsp">马上注册</a>
 						</div>
 					</form>
 					<div class="other_login">

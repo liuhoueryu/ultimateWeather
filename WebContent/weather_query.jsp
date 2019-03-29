@@ -10,7 +10,8 @@
 <head>
 <meta charset="UTF-8">
 <title>天气大全</title>
-<link rel="icon" href="images/favicon.ico"/>
+<link rel="icon" href="images/favicon.ico" />
+<link rel="stylesheet" href="css/starlight.css">
 </head>
 <style>
 * {
@@ -28,7 +29,8 @@ div {
 	height: 100%;
 }
 </style>
-<body style="background-image: url('img/background.jpg');background-repeat: no-repeat;background-position: center;">
+<body
+	style="background-image: url('img/bg_weather.jpg'); background-repeat: no-repeat; background-position: center;">
 	<%
 		if (request.getAttribute("list") == null) {
 			response.sendRedirect("WeatherQueryServlet");
@@ -40,17 +42,31 @@ div {
 		String province = (String) request.getAttribute("province");
 		String city = (String) request.getAttribute("city");
 	%>
-	<div>
-		<div align="center">
-		<a href="index.jsp">返回主页</a>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<a href="weather_networking_query.jsp">在线天气查询</a>
+	<%
+		//登录检查
+		if (session.getAttribute("user") == null) { //未登录
+	%>
+
+	<script>
+		alert("对不起，您尚未登录，请先登录");
+		location = "user_login.jsp";
+	</script>
+
+	<%
+		return;
+		}
+	%>	
+		<div id="table" class="wall" align="center">
+			<a style="background: rgba(255,255,255,0.5)" href="index.jsp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;返回主页&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			<a style="background: rgba(255,255,255,0.5)" href="weather_networking_query.jsp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在线天气查询&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
 			<br> <br> <br>
 			<form action="WeatherQueryServlet" method="post">
-				请输入省份<input type="text" name="province" value="<%=province%>" />
-				请输入城市<input type="text" name="city" value="<%=city%>" /> <input
-					type="submit" value="查询" /><br /> <br> <br>
-				<table border="1">
+				<font color="red"><b>请输入省份：</b></font><input type="text"
+					name="province" value="<%=province%>" /> <font color="red"><b>请输入城市：</b></font><input
+					type="text" name="city" value="<%=city%>" /> <input type="submit"
+					value="查询" /><br /> <br> <br>
+				<table border="1" style="background-color: white">
 					<tr>
 						<td>省份</td>
 						<td>城市</td>
@@ -82,12 +98,13 @@ div {
 				<button name="index">首 页</button>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<button name="nextpage">下一页</button>
-				
+
 			</form>
-			
+
 		</div>
-		
-	</div>
-	
+		<div id="midground" class="wall"></div>
+		<div id="foreground" class="wall"></div>
+		<div id="top" class="wall"></div>
+
 </body>
 </html>

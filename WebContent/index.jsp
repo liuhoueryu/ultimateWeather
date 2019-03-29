@@ -9,7 +9,7 @@
 <link rel="icon" href="images/favicon.ico"/>
 <link rel="stylesheet" href="css/weatherbox.css"/>
 </head>
-<body style="background-image: url('images/bg.jpg');background-repeat: no-repeat;background-size: 100%">
+<body style="background-image: url('img/bg_index.jpg');background-repeat: no-repeat;background-size: 100%">
 
 <%
 	//登录检查
@@ -39,9 +39,8 @@
 	int onlineCount = (Integer)application.getAttribute("onlineCount");
 %>
 
-<center><img src="image/photo/<%=user.getPhoto()%>" height="44" width="44">，欢迎【<%=user.getUsername() %>】光临主页，当前积分为【<%=user.getScore() %>】分，您是第【<%=onlineCount %>】位访客
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<center><header style="background:rgba(100, 100, 100, 0)"><img src="image/photo/<%=user.getPhoto()%>" height="44" width="44"><font color="red">，欢迎【<%=user.getUsername() %>】光临主页，当前天气积分为【<%=user.getScore() %>】分，您是第【<%=onlineCount %>】位访客</font></header>
+<br>
 <a href="UserLogoutServlet">注销</a>
 <br/>
 <br>
