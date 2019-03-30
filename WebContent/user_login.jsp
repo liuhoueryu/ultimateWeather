@@ -68,7 +68,7 @@
 						</div>
 						<div class="form_check_ipt">
 							<div class="left check_left">
-								<label><input type="checkbox" name="autoLogin" checked="checked">记住密码</label>
+								<label><input type="checkbox" name="autoLogin">记住密码</label>
 							</div>
 							<div class="right check_right">
 								<a href="user_retrieve_password.jsp">忘记密码</a>
