@@ -10,14 +10,6 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   <servlet>
-    <servlet-name>TestServlet</servlet-name>
-    <servlet-class>com.neuedu.servlet.TestServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>TestServlet</servlet-name>
-    <url-pattern>/TestServlet</url-pattern>
-  </servlet-mapping>
-  <servlet>
     <servlet-name>UserLoginServlet</servlet-name>
     <servlet-class>com.neuedu.servlet.UserLoginServlet</servlet-class>
     <init-param>
@@ -150,37 +142,6 @@
   <servlet-mapping>
     <servlet-name>TestDownloadServlet</servlet-name>
     <url-pattern>/TestDownloadServlet</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>NewsInitServlet</display-name>
-    <servlet-name>NewsInitServlet</servlet-name>
-    <servlet-class>com.neuedu.servlet.NewsInitServlet</servlet-class>
-    <load-on-startup>1</load-on-startup>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>NewsInitServlet</servlet-name>
-    <url-pattern>/NewsInitServlet</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>NewsAddServlet</display-name>
-    <servlet-name>NewsAddServlet</servlet-name>
-    <servlet-class>com.neuedu.servlet.NewsAddServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>NewsAddServlet</servlet-name>
-    <url-pattern>/NewsAddServlet</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>NewsQueryServlet</display-name>
-    <servlet-name>NewsQueryServlet</servlet-name>
-    <servlet-class>com.neuedu.servlet.NewsQueryServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>NewsQueryServlet</servlet-name>
-    <url-pattern>/NewsQueryServlet</url-pattern>
   </servlet-mapping>
   <filter>
     <filter-name>CharacterEncodingFilter</filter-name>
