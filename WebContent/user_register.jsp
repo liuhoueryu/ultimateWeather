@@ -16,7 +16,7 @@
 		var username = document.getElementById("username");
 		var usernameResult = document.getElementById("usernameResult");
 
-		if (username.value.length<2 || username.value.length>10) {
+		if (username.value.length <2 || username.value.length>10) {
 			usernameResult.innerHTML = "<img src='image/no.gif'/><font color='red'><b>用户名的长度必须在2-10个字符之间</b></font>";
 			return false;
 		} else {
@@ -204,7 +204,7 @@ div {
 					</tr>
 
 					<tr>
-						<td>职业</td>
+						<td>让我想想！</td>
 						<td><select name="job">
 								<option value="程序员" selected>程序员</option>
 								<option value="美工">美工</option>
@@ -214,25 +214,23 @@ div {
 					</tr>
 
 					<tr>
-						<td>兴趣爱好</td>
-						<td><input type="checkbox" name="interest" value="唱歌" />唱歌 <input
-							type="checkbox" name="interest" value="跳舞" />跳舞 <input
-							type="checkbox" name="interest" value="跑步" />跑步 <input
-							type="checkbox" name="interest" value="游泳" />游泳</td>
+						<td>    </td>
+						<td>    这里是出生日期！！！</td>
+						
 					</tr>
 
 					<tr>
 						<td>头像</td>
-						<td><input type="radio" name="photo" value="1.gif"
-							onclick="changePhoto()" checked /> <img src="image/photo/1.gif" />
-							<input type="radio" name="photo" value="2.gif"
-							onclick="changePhoto()" /> <img src="image/photo/2.gif" /> <input
-							type="radio" name="photo" value="3.gif" onclick="changePhoto()" />
-							<img src="image/photo/3.gif" /> <input type="radio" name="photo"
-							value="4.gif" onclick="changePhoto()" /> <img
-							src="image/photo/4.gif" /> <input type="radio" name="photo"
-							value="5.gif" onclick="changePhoto()" /> <img
-							src="image/photo/5.gif" /> <br> <input type="radio"
+						<td><input type="radio" name="photo" value="1.png"
+							onclick="changePhoto()" checked /> <img src="image/photo/1.png" />
+							<input type="radio" name="photo" value="2.png"
+							onclick="changePhoto()" /> <img src="image/photo/2.png" /> <input
+							type="radio" name="photo" value="3.png" onclick="changePhoto()" />
+							<img src="image/photo/3.png" /> <input type="radio" name="photo"
+							value="4.png" onclick="changePhoto()" /> <img
+							src="image/photo/4.png" /> <input type="radio" name="photo"
+							value="5.png" onclick="changePhoto()" /> <img
+							src="image/photo/5.png" /> <br> <input type="radio"
 							name="photo" id="photo" value="0.gif" onclick="changePhoto()" />
 							自定义头像上传 <input type="file" name="file" id="file"
 							style="visibility: hidden" /></td>
@@ -247,10 +245,14 @@ div {
 							onclick="document.getElementById('imgValCode').src=document.getElementById('imgValCode').src + '?'" />
 						</td>
 					</tr>
+					<tr>
+						<td >&nbsp</td>
+						<td >&nbsp</td>
+					</tr>
 
 					<tr>
-						<td colspan="2" align="center"><input type="submit"
-							value="立即注册" /> <input type="reset" value="重新填写" /></td>
+						<td align="center" ><input type="submit" value="立即注册" /></td>
+						<td align="center"><input type="reset" value="重X置X" /></td>
 					</tr>
 
 				</table>
