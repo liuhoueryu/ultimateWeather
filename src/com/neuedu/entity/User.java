@@ -16,7 +16,14 @@ public class User implements Serializable {
 	private String job;
 	private String interest;
 	private Date regtime;
+	private Date birthday;
 	
+	public Date getBirthday() {
+		return birthday;
+	}
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
+	}
 	public Integer getUserid() {
 		return userid;
 	}

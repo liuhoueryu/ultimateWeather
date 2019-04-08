@@ -16,7 +16,7 @@
 		var username = document.getElementById("username");
 		var usernameResult = document.getElementById("usernameResult");
 
-		if (username.value.length <2 || username.value.length>10) {
+		if (username.value.length<2 || username.value.length>10) {
 			usernameResult.innerHTML = "<img src='image/no.gif'/><font color='red'><b>用户名的长度必须在2-10个字符之间</b></font>";
 			return false;
 		} else {
@@ -143,7 +143,7 @@ div {
 </style>
 
 </head>
-
+<script src="js/laydate/laydate.js"></script>
 <body style="background-image: url('img/background.jpg');background-repeat: no-repeat;background-position: center;">
 <script type="text/javascript">
     // borwserRedirect
@@ -214,8 +214,8 @@ div {
 					</tr>
 
 					<tr>
-						<td>    </td>
-						<td>    这里是出生日期！！！</td>
+						<td>这里是出生日期！！！</td>
+						<td><input type="text" name="begin" value="" class="laydate-icon" onfocus="laydate()" readonly="readonly" /></td>
 						
 					</tr>
 
