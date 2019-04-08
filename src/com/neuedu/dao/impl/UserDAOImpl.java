@@ -86,10 +86,10 @@ public class UserDAOImpl implements UserDAO {
 	@Override
 	public boolean insertUser(User user) {
 
-		String sql = "insert into user values(null, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+		String sql = "insert into user values(null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 		return dbManager.execUpdate(sql, user.getUsername(), user.getPassword(), user.getScore(), user.getPhoto(),
-				user.getGender(), user.getJob(), user.getInterest(), user.getRegtime(), user.getPhonenumber());
+				user.getGender(), user.getJob(), user.getInterest(), user.getRegtime(), user.getPhonenumber(), user.getBirthday());
 
 	}
 

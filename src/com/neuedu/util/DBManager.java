@@ -133,11 +133,11 @@ public class DBManager {
 
 		DBManager dbManager = DBManager.getInstance();
 
-		String sql = "select * from weather where city like ? and province like ? order by province asc, city asc,date desc";
+		String sql = "insert into user values(null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-		String city="½ú³Ç";
-		String province="É½Î÷";
-		ResultSet rs = dbManager.execQuery(sql,city,province);
+		
+		ResultSet rs = dbManager.execQuery(sql,22, 222, 22, ' ',
+				'ÄÐ', ' ', ' ', ' ', ' ', '2010-02-02');
 
 		try {
 			while (rs.next()) {

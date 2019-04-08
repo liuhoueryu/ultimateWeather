@@ -135,10 +135,7 @@
 html, body {
 	height: 97%;
 }
-div {
-	width: 100%;
-	height: 100%;
-}
+
 
 </style>
 
@@ -215,7 +212,7 @@ div {
 
 					<tr>
 						<td>这里是出生日期！！！</td>
-						<td><input type="text" name="begin" value="" class="laydate-icon" onfocus="laydate()" readonly="readonly" /></td>
+						<td><input type="text" name="birthday" id="birthday" class="laydate-icon" onfocus="laydate()" readonly="readonly" /></td>
 						
 					</tr>
 

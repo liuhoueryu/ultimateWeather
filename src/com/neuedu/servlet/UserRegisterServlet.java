@@ -126,6 +126,8 @@ public class UserRegisterServlet extends HttpServlet {
 		String username = smartUpload.getRequest().getParameter("username");
 		String password = smartUpload.getRequest().getParameter("password");
 		String phonenumber=smartUpload.getRequest().getParameter("phonenumber");
+		String birthday=smartUpload.getRequest().getParameter("birthday");
+		
 		
 		String gender = smartUpload.getRequest().getParameter("gender");
 		String job = smartUpload.getRequest().getParameter("job");
@@ -168,6 +170,7 @@ public class UserRegisterServlet extends HttpServlet {
 		user.setInterest(interest);
 		user.setRegtime(new Date());
 		user.setPhonenumber(phonenumber);
+		user.setBirthday(birthday);
 		
 		
 		user = userService.register(user);
