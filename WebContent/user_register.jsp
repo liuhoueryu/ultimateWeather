@@ -248,8 +248,8 @@ html, body {
 					</tr>
 
 					<tr>
-						<td align="center" ><input type="submit" value="立即注册" /></td>
-						<td align="center"><input type="reset" value="重X置X" /></td>
+						<td align="right" ><input type="submit" value="立即注册" /></td>
+						<td align="center"><input type="reset" value="重新填写" /></td>
 					</tr>
 
 				</table>
