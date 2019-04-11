@@ -184,4 +184,14 @@
     <servlet-name>UserRetrievePasswordServlet</servlet-name>
     <url-pattern>/UserRetrievePasswordServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Bar</display-name>
+    <servlet-name>Bar</servlet-name>
+    <servlet-class>com.neuedu.servlet.Bar</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Bar</servlet-name>
+    <url-pattern>/Bar</url-pattern>
+  </servlet-mapping>
 </web-app>

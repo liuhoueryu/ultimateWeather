@@ -6,17 +6,42 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.neuedu.dao.WeatherDAO;
+import com.neuedu.entity.CityWeather;
 import com.neuedu.entity.Weather;
 import com.neuedu.util.DBManager;
 
 public class WeatherDAOImpl implements WeatherDAO {
+	@Override
+	public List<CityWeather> findCityWeatherList() {
+		DBManager dbManager = DBManager.getInstance();
+		String sql ="select PM10,date from weather where city = '̫ԭ' order by date asc limit 0, 10";
+		ResultSet rs = dbManager.execQuery(sql);
+		List<CityWeather> list = new ArrayList<>();
+		try {
+			while (rs.next()) {
+				CityWeather weather = new CityWeather();
+				weather.setPM(rs.getInt(1));
+				weather.setDate(rs.getString(2));
+
+				list.add(weather);
+
+			}
+			return list;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			dbManager.closeConnection();
+		}
+		return null;
+	}
 
 	@Override
-	public List<Weather> findWeatherList(String province, String city,int page) {
+	public List<Weather> findWeatherList(String province, String city, int page) {
 		DBManager dbManager = DBManager.getInstance();
 		String sql = "select * from weather where city like ? and province like ? order by province asc, city asc,date desc";
 		sql += " limit ?, 20";
-		ResultSet rs = dbManager.execQuery(sql, "%" + city + "%", "%" + province + "%",page);
+		ResultSet rs = dbManager.execQuery(sql, "%" + city + "%", "%" + province + "%", page);
 		List<Weather> list = new ArrayList<>();
 
 		try {
