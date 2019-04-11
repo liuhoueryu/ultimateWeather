@@ -66,14 +66,21 @@ div {
 					name="province" value="<%=province%>" /> <font color="red"><b>请输入城市：</b></font><input
 					type="text" name="city" value="<%=city%>" /> <input type="submit"
 					value="查询" /><br /> <br> <br>
-				<table border="1" style="background-color: white">
+				<table border="1" style="background-color: white; text-align: center;">
 					<tr>
 						<td>省份</td>
 						<td>城市</td>
+						<td>日期</td>
 						<td>天气</td>
 						<td>温度</td>
 						<td>降水量</td>
-						<td>日期</td>
+						<td>空气质量指数</td>
+						<td>PM2.5</td>
+						<td>PM10</td>
+						<td>CO</td>
+						<td>NO2</td>
+						<td>O3</td>
+						<td>SO2</td>
 					</tr>
 					<%
 						for (Weather weather : list) {
@@ -81,10 +88,17 @@ div {
 					<tr>
 						<td><%=StringUtil.convertKeyword(weather.getProvince(), province)%></td>
 						<td><%=StringUtil.convertKeyword(weather.getCity(), city)%></td>
+						<td><%=weather.getDate()%></td>
 						<td><%=weather.getWeather()%></td>
 						<td><%=weather.getTemperature()%></td>
 						<td><%=weather.getRainfall()%></td>
-						<td><%=weather.getDate()%></td>
+						<td><%=weather.getAqi() %></td>
+						<td><%=weather.getPm25() %></td>
+						<td><%=weather.getPm10() %></td>
+						<td><%=weather.getCo() %></td>
+						<td><%=weather.getNo2() %></td>
+						<td><%=weather.getO3() %></td>
+						<td><%=weather.getSo2() %></td>
 					</tr>
 					<%
 						}

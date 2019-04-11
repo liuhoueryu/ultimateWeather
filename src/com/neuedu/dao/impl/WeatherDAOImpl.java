@@ -22,12 +22,19 @@ public class WeatherDAOImpl implements WeatherDAO {
 		try {
 			while (rs.next()) {
 				Weather weather = new Weather();
-				weather.setProvince(rs.getString(1));
-				weather.setCity(rs.getString(2));
-				weather.setWeather(rs.getString(3));
-				weather.setTemperature(rs.getString(4));
-				weather.setRainfall(rs.getString(5));
-				weather.setDate(rs.getString(6));
+				weather.setProvince(rs.getString(2));
+				weather.setCity(rs.getString(3));
+				weather.setWeather(rs.getString(4));
+				weather.setTemperature(rs.getString(5));
+				weather.setRainfall(rs.getString(6));
+				weather.setDate(rs.getString(7));
+				weather.setAqi(rs.getString(8));
+				weather.setPm25(rs.getString(9));
+				weather.setPm10(rs.getString(10));
+				weather.setCo(rs.getString(11));
+				weather.setNo2(rs.getString(12));
+				weather.setO3(rs.getString(13));
+				weather.setSo2(rs.getString(14));
 
 				list.add(weather);
 
