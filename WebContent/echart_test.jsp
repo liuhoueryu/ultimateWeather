@@ -83,6 +83,12 @@
 
          
     </script>
-    
+    <form action="Bar" style="text-align: center;">
+    			<button name="prepage">上一页</button>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<button name="index">首 页</button>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<button name="nextpage">下一页</button>
+    </form>
 </body>
 </html>
