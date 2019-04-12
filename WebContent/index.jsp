@@ -52,7 +52,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="weather_networking_query.jsp">在线天气查询</a>
 </center>
-<div class="box" onclick="javascript:location='weather_networking_query.jsp'" style="cursor:pointer">
+<div class="box" onclick="javascript:location='echart_city.jsp'" style="cursor:pointer">
 	<ul class="minbox">
 		<li></li>
 		<li></li>

@@ -194,4 +194,14 @@
     <servlet-name>Bar</servlet-name>
     <url-pattern>/Bar</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CityChartsServlet</display-name>
+    <servlet-name>CityChartsServlet</servlet-name>
+    <servlet-class>com.neuedu.servlet.CityChartsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CityChartsServlet</servlet-name>
+    <url-pattern>/CityChartsServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

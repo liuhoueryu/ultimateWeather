@@ -7,5 +7,4 @@ import com.neuedu.entity.Weather;
 
 public interface WeatherDAO {
 	List<Weather> findWeatherList(String province,String city,int page);
-	List<CityWeather> findCityWeatherList();
 }
