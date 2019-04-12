@@ -1,0 +1,24 @@
+#text{
+    padding: 0 6px 0 6px;
+    background: #E1FFFF;
+    font-size: 14px;
+    width: 240px;
+    height: 30px;
+    border: none;
+    outline: none;
+}
+#text:hover{
+	background: #FFE4B5;
+}
+#btn{
+    width: 70px;
+    height: 30px;
+    border: none;
+    background: rgba(100,100,100,0.3);
+    color: #FFFFFF;
+    outline: none;
+    cursor: pointer;
+}
+#btn:hover{
+    background: rgba(100, 100, 100, 0.5);
+}

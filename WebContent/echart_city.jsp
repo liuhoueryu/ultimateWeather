@@ -127,11 +127,11 @@
          
     </script>
     <form action="CityChartsServlet" style="text-align: center;">
-    			<button name="prepage">上一页</button>
+    			<button name="prepage" style="width: 70px;height: 30px;border: none;background: rgba(100,100,100,0.3);color: #FFFFFF;outline: none;cursor: pointer;">上一页</button>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<button name="index">首 页</button>
+				<button name="index"   style="width: 70px;height: 30px;border: none;background: rgba(100,100,100,0.3);color: #FFFFFF;outline: none;cursor: pointer;">首 页</button>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<button name="nextpage">下一页</button>
+				<button name="nextpage" style="width: 70px;height: 30px;border: none;background: rgba(100,100,100,0.3);color: #FFFFFF;outline: none;cursor: pointer;">下一页</button>
     </form>
 </body>
 </html>

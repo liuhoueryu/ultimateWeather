@@ -12,6 +12,7 @@
 <title>天气大全</title>
 <link rel="icon" href="images/favicon.ico" />
 <link rel="stylesheet" href="css/starlight.css">
+<link rel="stylesheet" href="css/weather_query.css">
 </head>
 <style>
 * {
@@ -62,10 +63,10 @@ div {
 			<a style="background: rgba(255,255,255,0.5)" href="weather_networking_query.jsp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在线天气查询&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
 			<br> <br> <br>
 			<form action="WeatherQueryServlet" method="post">
-				<font color="red"><b>请输入省份：</b></font><input type="text"
-					name="province" value="<%=province%>" /> <font color="red"><b>请输入城市：</b></font><input
-					type="text" name="city" value="<%=city%>" /> <input type="submit"
-					value="查询" /><br /> <br> <br>
+				<input id="text" type="text" name="province" value="<%=province%>" placeholder="请输入您要查询的省份"/> 
+				<input id="text" type="text" name="city" value="<%=city%>" placeholder="请输入您要查询的城市"/> 
+				<input id="btn" type="submit" value="查询" /><br /> <br> <br>
+				
 				<table border="1" style="background-color: white; text-align: center;">
 					<tr>
 						<td>省份</td>
@@ -107,11 +108,11 @@ div {
 
 				</table>
 				<br> <br>
-				<button name="prepage">上一页</button>
+				<button id="btn" name="prepage" >上一页</button>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<button name="index">首 页</button>
+				<button id="btn" name="index" >首 页</button>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<button name="nextpage">下一页</button>
+				<button id="btn" name="nextpage" >下一页</button>
 
 			</form>
 
