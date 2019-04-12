@@ -67,7 +67,7 @@ div {
 				<input id="text" type="text" name="city" value="<%=city%>" placeholder="请输入您要查询的城市"/> 
 				<input id="btn" type="submit" value="查询" /><br /> <br> <br>
 				
-				<table border="1" style="background-color: white; text-align: center;">
+				<table id="btm" border="1">
 					<tr>
 						<td>省份</td>
 						<td>城市</td>
