@@ -51,7 +51,7 @@
 		<span><input id="btt" type="button" value="在线查询" onclick="window.location.href='weather_networking_query.jsp'"/></span>
 		<span><input id="btt" type="button" value="数据分析" onclick="window.location.href='echart_city.jsp'"/></span>
 		<span><input id="btt" type="button" value="天气大全" onclick="window.location.href='WeatherQueryServlet'"/></span>
-		<span><input id="bts" type="button" value="主页" onclick="window.location.href='index.jsp'"/></span>
+		<span><input id="bts" type="button" value="WEATHER" onclick="window.location.href='index.jsp'"/></span>
 	</div>
 </header>
 <br>
@@ -62,7 +62,7 @@
 <br>
 <br>
 <div class="box1" title="天气大全" onclick="javascript:location='WeatherQueryServlet'" style="cursor:pointer;float:left;margin-left: 200px">
-	<ul class="minbox">
+	<ul class="minbox1">
 		<li></li>
 		<li></li>
 		<li></li>
@@ -70,7 +70,7 @@
 		<li></li>
 		<li></li>
 	</ul>
-	<ol class="maxbox">
+	<ol class="maxbox1">
 		<li></li>
 		<li></li>
 		<li></li>
@@ -80,7 +80,7 @@
 	</ol>
 </div>
 <div class="box2" title="在线查询" onclick="javascript:location='weather_networking_query.jsp'" style="cursor:pointer;float:right;margin-right: 200px">
-	<ul class="minbox">
+	<ul class="minbox2">
 		<li></li>
 		<li></li>
 		<li></li>
@@ -88,7 +88,7 @@
 		<li></li>
 		<li></li>
 	</ul>
-	<ol class="maxbox">
+	<ol class="maxbox2">
 		<li></li>
 		<li></li>
 		<li></li>

@@ -26,27 +26,27 @@ li{
 		top:0;
 	}
 	.minbox li:nth-child(1){
-		background: url(../img/01.png) no-repeat 0 0;
+		background: url(../img/a.png) no-repeat 0 0;
 		-webkit-transform:translateZ(37.5px);
 	}
 	.minbox li:nth-child(2){
-		background: url(../img/02.png) no-repeat 0 0;
+		background: url(../img/d.png) no-repeat 0 0;
 		-webkit-transform:rotateX(180deg) translateZ(37.5px);
 	}
 	.minbox li:nth-child(3){
-		background: url(../img/03.png) no-repeat 0 0;
+		background: url(../img/b.png) no-repeat 0 0;
 		-webkit-transform:rotateX(-90deg) translateZ(37.5px);
 	}
 	.minbox li:nth-child(4){
-		background: url(../img/04.png) no-repeat 0 0;
+		background: url(../img/c.png) no-repeat 0 0;
 		-webkit-transform:rotateX(90deg) translateZ(37.5px);
 	}
 	.minbox li:nth-child(5){
-		background: url(../img/05.png) no-repeat 0 0;
+		background: url(../img/e.png) no-repeat 0 0;
 		-webkit-transform:rotateY(-90deg) translateZ(37.5px);
 	}
 	.minbox li:nth-child(6){
-		background: url(../img/06.png) no-repeat 0 0;
+		background: url(../img/e.png) no-repeat 0 0;
 		-webkit-transform:rotateY(90deg) translateZ(37.5px);
 	}
 	.maxbox{
@@ -100,30 +100,30 @@ li{
 	.box:hover ol li:nth-child(1){
 		-webkit-transform:translateZ(225px);
 		opacity: 0.8;
-		background: url(../img/07.jpg);
+		background: url(../img/f.png);
 	}
 	.box:hover ol li:nth-child(2){
 		-webkit-transform:rotateX(180deg) translateZ(225px);
 		opacity: 0.8;
-		background: url(../img/07.jpg);
+		background: url(../img/g.png);
 	}
 	.box:hover ol li:nth-child(3){
 		-webkit-transform:rotateX(-90deg) translateZ(225px);
-		opacity: 0.2;
+		opacity: 0;
 	}
 	.box:hover ol li:nth-child(4){
 		-webkit-transform:rotateX(90deg) translateZ(225px);
-		opacity: 0.2;
+		opacity: 0;
 	}
 	.box:hover ol li:nth-child(5){
 		-webkit-transform:rotateY(-90deg) translateZ(225px);
 		opacity: 0.8;
-		background: url(../img/07.jpg);
+		background: url(../img/f.png);
 	}
 	.box:hover ol li:nth-child(6){
 		-webkit-transform:rotateY(90deg) translateZ(225px);
 		opacity: 0.8;
-		background: url(../img/07.jpg);
+		background: url(../img/f.png);
 	}
 	@keyframes move{
 		0%{

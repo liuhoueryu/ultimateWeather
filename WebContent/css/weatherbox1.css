@@ -60,7 +60,7 @@ li{
 	.maxbox1 li{
 		width: 150px;
 		height: 150px;
-		border:1px solid #151515;
+		border:1px solid #000000;
 		position: absolute;
 		left: 0;
 		top: 0;
@@ -69,33 +69,33 @@ li{
 	}
 	.maxbox1 li:nth-child(1){
 		-webkit-transform:translateZ(75px);
-		opacity: 0.2;
-		background: #717171;
+		opacity: 0.1;
+		background: #00BFFF;
 	}
 	.maxbox1 li:nth-child(2){
 		-webkit-transform:rotateX(180deg) translateZ(75px);
-		opacity: 0.2;
-		background: #717171;
+		opacity: 0.1;
+		background: #00BFFF;
 	}
 	.maxbox1 li:nth-child(3){
 		-webkit-transform:rotateX(-90deg) translateZ(75px);
-		opacity: 0.2;
-		background: #717171;
+		opacity: 0.1;
+		background: #00BFFF;
 	}
 	.maxbox1 li:nth-child(4){
 		-webkit-transform:rotateX(90deg) translateZ(75px);
-		opacity: 0.2;
-		background: #717171;
+		opacity: 0.1;
+		background: #00BFFF;
 	}
 	.maxbox1 li:nth-child(5){
 		-webkit-transform:rotateY(-90deg) translateZ(75px);
-		opacity: 0.2;
-		background: #717171;
+		opacity: 0.1;
+		background: #00BFFF;
 	}
 	.maxbox1 li:nth-child(6){
 		-webkit-transform:rotateY(90deg) translateZ(75px);
 		opacity: 0.2;
-		background: #717171;
+		background: #00BFFF;
 	}
 	.box1:hover ol li:nth-child(1){
 		-webkit-transform:translateZ(225px);
@@ -109,11 +109,11 @@ li{
 	}
 	.box1:hover ol li:nth-child(3){
 		-webkit-transform:rotateX(-90deg) translateZ(225px);
-		opacity: 0.2;
+		opacity: 0;
 	}
 	.box1:hover ol li:nth-child(4){
 		-webkit-transform:rotateX(90deg) translateZ(225px);
-		opacity: 0.2;
+		opacity: 0;
 	}
 	.box1:hover ol li:nth-child(5){
 		-webkit-transform:rotateY(-90deg) translateZ(225px);

@@ -20,8 +20,9 @@
     color: white;
     outline:none;
     cursor: pointer;
-    font-size: medium;
-    margin-right: 5px;
+    font-size: x-large;
+    font-weight:bold;
+    margin-right: 30px;
 }
 #btt{
     width: 200px;
