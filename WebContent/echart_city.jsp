@@ -16,7 +16,7 @@
 <body>
     <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
     <div id="main" style="width: 1200px;height:500px;"></div>
-    
+   
     <script type="text/javascript">
         
         var myChart = echarts.init(document.getElementById('main'));
@@ -133,5 +133,10 @@
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<button name="nextpage" style="width: 70px;height: 30px;border: none;background: rgba(100,100,100,0.3);color: #FFFFFF;outline: none;cursor: pointer;">下一页</button>
     </form>
+    <br>
+    <br>
+    <div align="center">
+    	<input type="button" value="返回主页" onclick="window.location.href='index.jsp'" style="width: 300px;height: 50px;border: none;background: rgba(255,69,0,1);color: #FFFFFF;outline: none;cursor: pointer;font-size: medium;"/>
+    </div>
 </body>
 </html>

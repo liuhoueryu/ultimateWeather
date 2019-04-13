@@ -8,8 +8,11 @@
 <title>主页</title>
 <link rel="icon" href="images/favicon.ico"/>
 <link rel="stylesheet" href="css/weatherbox.css"/>
+<link rel="stylesheet" href="css/weatherbox1.css"/>
+<link rel="stylesheet" href="css/weatherbox2.css"/>
+<link rel="stylesheet" href="css/index.css"/>
 </head>
-<body style="background-image: url('img/bg_index.jpg');background-repeat: no-repeat;background-size: 100%">
+<body style="background-image: url('img/bg_index.jpg');background-repeat: no-repeat;background-size: 100%;margin: 0">
 
 <%
 	//登录检查
@@ -36,23 +39,65 @@
 	User user = (User)session.getAttribute("user");
 	
 	//从application属性范围中取出在线人数
-	int onlineCount = (Integer)application.getAttribute("onlineCount");
 %>
 
-<center><header style="background:rgba(100, 100, 100, 0)"><img src="image/photo/<%=user.getPhoto()%>" height="44" width="44"><font color="red">，欢迎【<%=user.getUsername() %>】光临主页，当前天气积分为【<%=user.getScore() %>】分，您是第【<%=onlineCount %>】位访客</font></header>
+<header style="height: 50px;background: rgba(100, 100, 100, 0.6);color:white">
+	<div id="user">
+		<img src="image/photo/<%=user.getPhoto()%>" height="33" width="33"> 【<%=user.getUsername() %>】，您好！
+		<span><input id="btn" type="button" value="注销" onclick="window.location.href='UserLogoutServlet'"/></span>
+	</div>
+	
+	<div id="index">
+		<span><input id="btt" type="button" value="在线查询" onclick="window.location.href='weather_networking_query.jsp'"/></span>
+		<span><input id="btt" type="button" value="数据分析" onclick="window.location.href='echart_city.jsp'"/></span>
+		<span><input id="btt" type="button" value="天气大全" onclick="window.location.href='WeatherQueryServlet'"/></span>
+		<span><input id="bts" type="button" value="主页" onclick="window.location.href='index.jsp'"/></span>
+	</div>
+</header>
 <br>
-<a href="UserLogoutServlet">注销</a>
-<br/>
 <br>
 <br>
-<br/>
-<a href="WeatherQueryServlet">天气查询</a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="weather_networking_query.jsp">在线天气查询</a>
-</center>
-<div class="box" onclick="javascript:location='echart_city.jsp'" style="cursor:pointer">
+<br>
+<br>
+<br>
+<br>
+<div class="box1" title="天气大全" onclick="javascript:location='WeatherQueryServlet'" style="cursor:pointer;float:left;margin-left: 200px">
+	<ul class="minbox">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<ol class="maxbox">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ol>
+</div>
+<div class="box2" title="在线查询" onclick="javascript:location='weather_networking_query.jsp'" style="cursor:pointer;float:right;margin-right: 200px">
+	<ul class="minbox">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<ol class="maxbox">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ol>
+</div>
+<div class="box" title="数据分析" onclick="javascript:location='echart_city.jsp'" style="cursor:pointer">
 	<ul class="minbox">
 		<li></li>
 		<li></li>
