@@ -29,6 +29,16 @@ div {
 	width: 100%;
 	height: 100%;
 }
+a{
+ text-decoration: none;
+
+}
+tr{
+  text-align: center;
+  width: 100%;
+}
+
+
 </style>
 <body
 	style="background-image: url('img/bg_weather.jpg'); background-repeat: no-repeat; background-position: center;">
@@ -67,7 +77,7 @@ div {
 				<input id="text" type="text" name="city" value="<%=city%>" placeholder="请输入您要查询的城市"/> 
 				<input id="btn" type="submit" value="查询" /><br /> <br> <br>
 				
-				<table id="btm" border="1">
+				<table id="btm" border="1" style="width:100%;">
 					<tr>
 						<td>省份</td>
 						<td>城市</td>

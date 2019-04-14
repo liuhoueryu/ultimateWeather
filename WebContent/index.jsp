@@ -41,7 +41,7 @@
 	//从application属性范围中取出在线人数
 %>
 
-<header style="height: 50px;background: rgba(100, 100, 100, 0.6);color:white">
+<header style="height: 50px;background: rgba(100, 100, 100, 0.5);color:white">
 	<div id="user">
 		<img src="image/photo/<%=user.getPhoto()%>" height="33" width="33"> 【<%=user.getUsername() %>】，您好！
 		<span><input id="btn" type="button" value="注销" onclick="window.location.href='UserLogoutServlet'"/></span>

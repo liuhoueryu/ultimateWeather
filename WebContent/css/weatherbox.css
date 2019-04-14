@@ -70,32 +70,32 @@ li{
 	.maxbox li:nth-child(1){
 		-webkit-transform:translateZ(75px);
 		opacity: 0.2;
-		background: #717171;
+		background: #ffffff;
 	}
 	.maxbox li:nth-child(2){
 		-webkit-transform:rotateX(180deg) translateZ(75px);
 		opacity: 0.2;
-		background: #717171;
+		background: #ffffff;
 	}
 	.maxbox li:nth-child(3){
 		-webkit-transform:rotateX(-90deg) translateZ(75px);
 		opacity: 0.2;
-		background: #717171;
+		background: #ffffff;
 	}
 	.maxbox li:nth-child(4){
 		-webkit-transform:rotateX(90deg) translateZ(75px);
 		opacity: 0.2;
-		background: #717171;
+		background: #ffffff;
 	}
 	.maxbox li:nth-child(5){
 		-webkit-transform:rotateY(-90deg) translateZ(75px);
 		opacity: 0.2;
-		background: #717171;
+		background: #ffffff;
 	}
 	.maxbox li:nth-child(6){
 		-webkit-transform:rotateY(90deg) translateZ(75px);
 		opacity: 0.2;
-		background: #717171;
+		background: #ffffff;
 	}
 	.box:hover ol li:nth-child(1){
 		-webkit-transform:translateZ(225px);

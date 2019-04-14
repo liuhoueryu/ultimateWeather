@@ -16,7 +16,7 @@
     width: 200px;
     height: 50px;
     border: none;
-    background: rgba(255,140,0,1);
+
     color: white;
     outline:none;
     cursor: pointer;
@@ -29,13 +29,14 @@
     height: 50px;
     border: none;
     background: rgba(255,140,0,0);
-    color: white;
+    color: rgba(192,192,192,0.9);
     outline:none;
     cursor: pointer;
     font-size: medium;
 }
 #btt:hover{
-    background: rgba(255,140,0,1);
+    background: rgba(255,140,0,0);
+    color:white;
 }
 #btn{
     margin-left:25px;
