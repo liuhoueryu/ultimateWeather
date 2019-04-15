@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.neuedu.entity.CitySet;
 import com.neuedu.entity.Everyday;
-import com.neuedu.entity.Product;
 import com.neuedu.util.DBManager;
 import com.neuedu.vo.WeatherPage;
 
@@ -22,7 +22,6 @@ import com.neuedu.vo.WeatherPage;
  */
 public class Bar extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		request.getRequestDispatcher("echart_test.jsp").forward(request, response);
@@ -51,25 +50,29 @@ public class Bar extends HttpServlet {
 			System.out.println(a.getCurrentPage());
 			System.out.println(a);
 		}
-		
+		CitySet c=CitySet.getInstance();
+		String city=c.getCity();
+		System.out.println("city="+city);
+		if(city==null)
+			city="北京";
 		List<Everyday> list1 = new ArrayList<Everyday>();
 		DBManager dbManager = DBManager.getInstance();
-		String sql ="select PM10,date from weather where city = '太原' order by date asc";
+		String sql ="select PM10,`PM2.5`,aqi,temperature,date from weather where city like ? order by date asc";
 		sql += " limit ?, 10";
-		ResultSet rs = dbManager.execQuery(sql,a.getCurrentPage());
+		ResultSet rs = dbManager.execQuery(sql,"%" + city + "%",a.getCurrentPage());
 		try {
 			while (rs.next()) {
-				list1.add(new Everyday(rs.getString(2),rs.getInt(1))); 
+				list1.add(new Everyday(rs.getString(5),rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getInt(4))); 
 				}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			// TODO Auto-generated catch block 
 			e.printStackTrace();
 		}
 		
 		ObjectMapper mapper1 = new ObjectMapper();
 		String json1 = mapper1.writeValueAsString(list1);
 
-		// 将json数据返回给客户端
+		// 将json数据返回给客户端  
 		response.setContentType("text/html; charset=utf-8");
 		response.getWriter().write(json1); 
 	}

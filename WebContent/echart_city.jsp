@@ -1,3 +1,4 @@
+<%@page import="com.neuedu.entity.User"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -10,11 +11,52 @@
 <script type="text/javascript" src="echarts/echarts.min.js"></script>
 <!-- 引入jquery.js -->
 <script type="text/javascript" src="echarts/jquery.min.js"></script>
+<link rel="stylesheet" href="css/index.css"/>
 <link rel="icon" href="images/favicon.ico"/>
 </head>
+<%
+	//登录检查
+	if(session.getAttribute("user")==null){   //未登录
+%>
+		
+		<script>
+			alert("对不起，您尚未登录，请先登录");
+			location = "user_login.jsp";
+		</script>	
+	 
+<%		
+		return;
+	}
+%>
 
-<body>
+<%
+	//从session属性范围中取出用户名，积分,头像
+	/* String username = ( String)session.getAttribute("username");
+	int score = (Integer)session.getAttribute("score");
+	String photo = (String)session.getAttribute("photo"); */
+	
+	//从session属性范围中取出user对象
+	User user = (User)session.getAttribute("user");
+	
+	//从application属性范围中取出在线人数
+%>
+<header style="height: 50px;background: rgba(100, 100, 100, 0.5);color:white">
+	<div id="user">
+		<img src="image/photo/<%=user.getPhoto()%>" height="33" width="33"> 【<%=user.getUsername() %>】，您好！
+		<span><input id="btn" type="button" value="注销" onclick="window.location.href='UserLogoutServlet'"/></span>
+	</div>
+	
+	<div id="index">
+		<span><input id="btt" type="button" value="在线查询" onclick="window.location.href='weather_networking_query.jsp'"/></span>
+		<span><input id="btt" type="button" value="数据分析" onclick="window.location.href='echart_city.jsp'"/></span>
+		<span><input id="btt" type="button" value="天气大全" onclick="window.location.href='WeatherQueryServlet'"/></span>
+		<span><input id="bts" type="button" value="WEATHER" onclick="window.location.href='index.jsp'"/></span>
+	</div>
+</header>
+<body style="margin: 0px;background-color: #FFE4C4;">
     <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <br>
+    <br>
     <div id="main" style="width: 1200px;height:500px;"></div>
    
     <script type="text/javascript">
@@ -134,9 +176,8 @@
 				<button name="nextpage" style="width: 70px;height: 30px;border: none;background: rgba(100,100,100,0.3);color: #FFFFFF;outline: none;cursor: pointer;">下一页</button>
     </form>
     <br>
-    <br>
     <div align="center">
-    	<input type="button" value="返回主页" onclick="window.location.href='index.jsp'" style="width: 300px;height: 50px;border: none;background: rgba(255,69,0,1);color: #FFFFFF;outline: none;cursor: pointer;font-size: medium;"/>
+    	<input type="button" value="高级检索" onclick="window.location.href='chooseCity.jsp'" style="width: 300px;height: 50px;border: none;background: rgba(255,69,0,1);color: #FFFFFF;outline: none;cursor: pointer;font-size: medium;"/>
     </div>
 </body>
 </html>

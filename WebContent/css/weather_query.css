@@ -10,6 +10,18 @@
 #text:hover{
 	background: #FFE4B5;
 }
+#tet{
+    padding: 0 6px 0 6px;
+    background: #E1FFFF;
+    font-size: 14px;
+    width: 240px;
+    height: 30px;
+    border: none;
+    outline: none;
+}
+#tet:hover{
+	background: rgba(186,85,211,0.5);
+}
 #btm{
 
     background: rgba(100,100,100,0.5);
@@ -19,7 +31,7 @@
 #btm:hover{
     background: rgba(100, 100, 100, 0.3);
 }
-#btn{
+#btv{
     width: 70px;
     height: 30px;
     border: none;
@@ -28,6 +40,6 @@
     outline: none;
     cursor: pointer;
 }
-#btn:hover{
+#btv:hover{
     background: rgba(100, 100, 100, 0.5);
 }

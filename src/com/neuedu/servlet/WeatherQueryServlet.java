@@ -51,7 +51,7 @@ public class WeatherQueryServlet extends HttpServlet {
 			city = "";
 		if (province == null)
 			province = "";
-
+		System.out.println(city);
 		WeatherService weatherService = new WeatherServiceImpl();
 
 		List<Weather> list = weatherService.getWeatherList(province, city,a.getCurrentPage());

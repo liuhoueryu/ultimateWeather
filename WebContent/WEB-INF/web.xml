@@ -204,4 +204,14 @@
     <servlet-name>CityChartsServlet</servlet-name>
     <url-pattern>/CityChartsServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CityChoose</display-name>
+    <servlet-name>CityChoose</servlet-name>
+    <servlet-class>com.neuedu.servlet.CityChoose</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CityChoose</servlet-name>
+    <url-pattern>/CityChoose</url-pattern>
+  </servlet-mapping>
 </web-app>

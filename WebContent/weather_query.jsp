@@ -1,3 +1,4 @@
+<%@page import="com.neuedu.entity.User"%>
 <%@page import="com.neuedu.entity.Weather"%>
 <%@page import="java.util.List"%>
 <%@page import="com.neuedu.util.StringUtil"%>
@@ -13,6 +14,7 @@
 <link rel="icon" href="images/favicon.ico" />
 <link rel="stylesheet" href="css/starlight.css">
 <link rel="stylesheet" href="css/weather_query.css">
+<link rel="stylesheet" href="css/index.css">
 </head>
 <style>
 * {
@@ -20,15 +22,6 @@
 	padding: 0;
 }
 
-html, body {
-	width: 100%;
-	height: 100%;
-}
-
-div {
-	width: 100%;
-	height: 100%;
-}
 a{
  text-decoration: none;
 
@@ -41,7 +34,7 @@ tr{
 
 </style>
 <body
-	style="background-image: url('img/bg_weather.jpg'); background-repeat: no-repeat; background-position: center;">
+	style="background-image: url('img/bg_weather.jpg'); background-repeat: no-repeat;background-size: 100%;margin: 0">
 	<%
 		if (request.getAttribute("list") == null) {
 			response.sendRedirect("WeatherQueryServlet");
@@ -54,28 +47,52 @@ tr{
 		String city = (String) request.getAttribute("city");
 	%>
 	<%
-		//登录检查
-		if (session.getAttribute("user") == null) { //未登录
-	%>
-
-	<script>
-		alert("对不起，您尚未登录，请先登录");
-		location = "user_login.jsp";
-	</script>
-
-	<%
+	//登录检查
+	if(session.getAttribute("user")==null){   //未登录
+%>
+		
+		<script>
+			alert("对不起，您尚未登录，请先登录");
+			location = "user_login.jsp";
+		</script>	
+	 
+<%		
 		return;
-		}
-	%>	
-		<div id="table" class="wall" align="center">
-			<a style="background: rgba(255,255,255,0.5)" href="index.jsp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;返回主页&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a> 
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-			<a style="background: rgba(255,255,255,0.5)" href="weather_networking_query.jsp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在线天气查询&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+	}
+%>
+
+<%
+	//从session属性范围中取出用户名，积分,头像
+	/* String username = ( String)session.getAttribute("username");
+	int score = (Integer)session.getAttribute("score");
+	String photo = (String)session.getAttribute("photo"); */
+	
+	//从session属性范围中取出user对象
+	User user = (User)session.getAttribute("user");
+	
+	//从application属性范围中取出在线人数
+%>
+<div id="table" class="wall" align="center">
+	<header id="table" style="height: 50px;background: rgba(100, 100, 100, 0.5);color:white;">
+		<div id="user">
+			<img src="image/photo/<%=user.getPhoto()%>" height="33" width="33"> 【<%=user.getUsername() %>】，您好！
+			<span><input id="btn" type="button" value="注销" onclick="window.location.href='UserLogoutServlet'"/></span>
+		</div>
+	
+		<div id="index" style="z-index: 5;">
+			<span><input id="btt" type="button" value="在线查询" onclick="window.location.href='weather_networking_query.jsp'" style="z-index: 5;"/></span>
+			<span><input id="btt" type="button" value="数据分析" onclick="window.location.href='echart_city.jsp'"/></span>
+			<span><input id="btt" type="button" value="天气大全" onclick="window.location.href='WeatherQueryServlet'"/></span>
+			<span><input id="bts" type="button" value="WEATHER" onclick="window.location.href='index.jsp'"/></span>
+		</div>
+	</header>	
+		
+			
 			<br> <br> <br>
 			<form action="WeatherQueryServlet" method="post">
 				<input id="text" type="text" name="province" value="<%=province%>" placeholder="请输入您要查询的省份"/> 
 				<input id="text" type="text" name="city" value="<%=city%>" placeholder="请输入您要查询的城市"/> 
-				<input id="btn" type="submit" value="查询" /><br /> <br> <br>
+				<input id="btv" type="submit" value="查询" /><br /> <br> <br>
 				
 				<table id="btm" border="1" style="width:100%;">
 					<tr>
@@ -118,11 +135,11 @@ tr{
 
 				</table>
 				<br> <br>
-				<button id="btn" name="prepage" >上一页</button>
+				<button id="btv" name="prepage" >上一页</button>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<button id="btn" name="index" >首 页</button>
+				<button id="btv" name="index" >首 页</button>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<button id="btn" name="nextpage" >下一页</button>
+				<button id="btv" name="nextpage" >下一页</button>
 
 			</form>
 
