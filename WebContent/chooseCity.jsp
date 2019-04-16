@@ -28,8 +28,12 @@ function showTime(){
 	
 	if(regtime.value=="全部时间"){
 		timerange.style.visibility = "hidden";
+		tes.value="2018-01-01";
+		teb.value="2019-05-01";
 	}else{
 		timerange.style.visibility = "visible";
+		tes.value="";
+		teb.value="";
 	}
 	
 }
