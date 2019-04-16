@@ -91,11 +91,11 @@ function showTime(){
 				<br>
     			<br>
 				<span id="timerange" style="visibility: hidden;">
-    			<input type="text" id="tes" name="start" placeholder="请输入开始日期" readonly="readonly" >
+    			<input type="text" id="tes" name="start" value="2018-01-01" placeholder="请输入开始日期" readonly="readonly" >
     			
 				<br>
 				<br>
-				<input type="text" id="teb" name="end" placeholder="请输入结束日期" readonly="readonly">
+				<input type="text" id="teb" name="end" value="2019-05-01" placeholder="请输入结束日期" readonly="readonly">
 				</span>
 				<br>
 				<br>
