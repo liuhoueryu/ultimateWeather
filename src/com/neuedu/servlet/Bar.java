@@ -52,20 +52,30 @@ public class Bar extends HttpServlet {
 		}
 		CitySet c=CitySet.getInstance();
 		String city=c.getCity();
+		String start=null;
+		start=c.getStart();
+		String end=null;
+		end=c.getEnd();
 		System.out.println("city="+city);
+		System.out.println("start="+start);
+		System.out.println("end="+end);
 		if(city==null)
 			city="±±¾©";
+		
+		if(start==null) {
+		System.out.println("start="+start);
+		System.out.println("end="+end);}
 		List<Everyday> list1 = new ArrayList<Everyday>();
 		DBManager dbManager = DBManager.getInstance();
-		String sql ="select PM10,`PM2.5`,aqi,temperature,date from weather where city like ? order by date asc";
+		String sql ="select PM10,`PM2.5`,aqi,temperature,date from weather where (city like ? and date >=? and date <=?) order by date asc";
 		sql += " limit ?, 10";
-		ResultSet rs = dbManager.execQuery(sql,"%" + city + "%",a.getCurrentPage());
+		ResultSet rs = dbManager.execQuery(sql,"%" + city + "%",start,end,a.getCurrentPage());
 		try {
 			while (rs.next()) {
 				list1.add(new Everyday(rs.getString(5),rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getInt(4))); 
 				}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block 
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		

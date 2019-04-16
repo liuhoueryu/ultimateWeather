@@ -22,13 +22,49 @@
 #tet:hover{
 	background: rgba(186,85,211,0.5);
 }
-#btm{
+#regtime{
+    padding: 0 6px 0 6px;
+    background: #E1FFFF;
+    font-size: 14px;
+    width: 120px;
+    height: 30px;
+    border: none;
+    outline: none;
+}
+#regtime:hover{
+	background: rgba(186,85,211,0.5);
+}
+#tes{
+    padding: 0 6px 0 6px;
+    background: #E1FFFF;
+    font-size: 14px;
+    width: 240px;
+    height: 30px;
+    border: none;
+    outline: none;
+}
+#tes:hover{
+	background: rgba(186,85,211,0.5);
+}
+#teb{
+    padding: 0 6px 0 6px;
+    background: #E1FFFF;
+    font-size: 14px;
+    width: 240px;
+    height: 30px;
+    border: none;
+    outline: none;
+}
+#teb:hover{
+	background: rgba(186,85,211,0.5);
+}
+tr{
 
     background: rgba(100,100,100,0.5);
     color: #FFFFFF;
     cursor: pointer;
 }
-#btm:hover{
+tr:hover{
     background: rgba(100, 100, 100, 0.3);
 }
 #btv{

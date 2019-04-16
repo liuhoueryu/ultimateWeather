@@ -5,12 +5,35 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>高级检索</title>
 <link rel="stylesheet" href="css/index.css"/>
 <link rel="stylesheet" href="css/weather_query.css"/>
 <link rel="icon" href="images/favicon.ico"/>
 </head>
+
 <body style="margin: 0px;background-color: #FFE4C4">
+<script type="text/javascript" src="laydate/laydate.js"></script>
+<script>
+//执行一个laydate实例
+laydate.render({
+  	elem: '#tes' //指定元素
+});
+laydate.render({
+  	elem: '#teb' //指定元素
+});
+function showTime(){
+	
+	var regtime = document.getElementById("regtime");
+	var timerange = document.getElementById("timerange");
+	
+	if(regtime.value=="全部时间"){
+		timerange.style.visibility = "hidden";
+	}else{
+		timerange.style.visibility = "visible";
+	}
+	
+}
+</script>
 <%
 	//登录检查
 	if(session.getAttribute("user")==null){   //未登录
@@ -54,8 +77,26 @@
 <br>
 <br>
 <form action="CityChoose" style="text-align: center;margin-top: 210px;" method="post">
-    			<input id="tet" type="text" name="city" placeholder="请输入您要查询的城市"/> 
+    	
+    			<input id="tet" type="text" name="city" placeholder="请输入您要查询的城市"/>
+    			
+				<select id="regtime" name="regtime" onchange="showTime()">
+					<option value="全部时间">全部时间</option>
+					<option value="指定时间">指定时间</option>
+				</select>
+				<br>
+    			<br>
+				<span id="timerange" style="visibility: hidden;">
+    			<input type="text" id="tes" name="start" placeholder="请输入开始日期" readonly="readonly" >
+    			
+				<br>
+				<br>
+				<input type="text" id="teb" name="end" placeholder="请输入结束日期" readonly="readonly">
+				</span>
+				<br>
+				<br>
 				<input id="btv" type="submit" value="查询" />
 </form>
+
 </body>
 </html>

@@ -20,8 +20,12 @@ public class CityChoose extends HttpServlet {
 		String charSet = this.getServletContext().getInitParameter("charSet");
 		request.setCharacterEncoding(charSet);
 		String city = request.getParameter("city");
+		String start = request.getParameter("start");
+		String end = request.getParameter("end");
 		CitySet c=CitySet.getInstance();
 		c.setCity(city);
+		c.setStart(start);
+		c.setEnd(end);
 		System.out.println(c.getCity());
 		request.getRequestDispatcher("echart_test.jsp").forward(request, response);
 	}
